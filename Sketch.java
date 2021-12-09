@@ -2,35 +2,38 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 	
+	// BASE DIEMSIONS USED TO CALCULATE DOOR POSITION
+	int baseX = 200;
+	int baseY = 400;
 	
-  /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
-  public void settings() {
-	// put your size call here
-    size(600, 600);
-  }
-
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
-  public void setup() {
-    background(210, 255, 173);
-  }
-
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
-  public void draw() {
+	public void settings() {
+		size(600, 600);
+	}
 	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
+	public void setup() {
+		background(210, 255, 173);
+		strokeWeight(5);
+	}
 
-    stroke(255);
-    line(50, 125, 70, 50);  
-  }
-  
-  // define other methods down here.
+	public void draw() {
+		
+		// BASE OF THE HOUSE
+		rect(baseX, baseY, 200, 150);
+		fill(138, 132, 127);
+		// DOOR
+		rect(baseX + 80, baseY + 100, 30, 50);
+		fill(118, 156, 145);
+		
+		// ROOF
+		triangle(100, 400, 300, 80, 500, 400);
+		fill(44, 245, 188);
+		
+		// WINDOWS
+		ellipse(350, 450, 30, 30);
+		ellipse(250, 450, 30, 30);
+		fill(255);
+		
+		line(300, 300, 160, 300);
+		line(300, 200, 223, 200);
+	}
 }
