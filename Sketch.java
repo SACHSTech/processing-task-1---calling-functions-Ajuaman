@@ -17,7 +17,7 @@ public class Sketch extends PApplet {
 
 	public void draw() {
 		
-	// BASE OF THE HOUSE
+	 // BASE OF THE HOUSE
 	 rect(baseX, baseY, 200, 150);
 	 fill(138, 132, 127);
 	 // DOOR
